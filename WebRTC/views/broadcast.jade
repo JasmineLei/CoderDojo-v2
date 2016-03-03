@@ -1,0 +1,81 @@
+
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title Broadcast
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    style.
+      audio, video {
+                -moz-transition: all 1s ease;
+                -ms-transition: all 1s ease;
+
+                -o-transition: all 1s ease;
+                -webkit-transition: all 1s ease;
+                transition: all 1s ease;
+                vertical-align: top;
+
+                width: 45%;
+            }
+
+            input {
+                border: 1px solid #d9d9d9;
+                border-radius: 1px;
+                font-size: 2em;
+                margin: .2em;
+                width: 70%;
+            }
+
+            .setup {
+                border-bottom-left-radius: 0;
+                border-top-left-radius: 0;
+                font-size: 102%;
+                height: 47px;
+                margin-left: -9px;
+                margin-top: 8px;
+                position: absolute;
+            }
+
+            p { padding: 1em; }
+
+            li {
+                border-bottom: 1px solid rgb(189, 189, 189);
+                border-left: 1px solid rgb(189, 189, 189);
+                padding: .5em;
+            }
+  script.
+    document.createElement('article')
+  body
+    article
+      table(class="visible")
+        tr
+          td(style="text-align: right;")
+            input(type="text", id="conference-name", placeholder="Broadcast Name")
+          td
+          button(id="start-conferencing").
+            New Broadcast
+      table(id="rooms-list" class="visible")
+     
+      table(class="visible")
+        tr
+          td(id="share-link")
+            h2
+              strong Private Broadcast??
+              a(id='plink' href='', target='_top', title='Open this link in new tab. Then your broadcasting room will be private!')
+                code
+                  strong(id="unique-token") #123456789
+      div(id="participants")
+      
+          
+
+script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')    
+script(src='https://www.webrtc-experiment.com/firebase.js')
+script(src='https://www.webrtc-experiment.com/RTCPeerConnection-v1.5.js')
+script(src='js/broadcast.js')
+script(src='js/broadcast-ui.js')
+
+
+      
